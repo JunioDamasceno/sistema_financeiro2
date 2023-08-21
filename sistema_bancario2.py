@@ -18,6 +18,8 @@ j = 0
 nsaques = 0
 lim_saques = 3
 opcao = ''
+usuarios = []
+contas = ["AGÊNCIA", "CONTA", "CPF", "NOME"]
 
 def menu():
     menu = """
@@ -30,12 +32,33 @@ def menu():
     [s]  Sacar
     [e]  Extrato
     [q]  Sair
+    Ditige a opção: 
     """
-    return(input("Digite a opção: "menu))
+    return(input(menu))
 
 def novo_usuario():
-    #Criar função
-    return()
+    cpf = input("Informe o seu CPF: ")
+    consulta = filtrar_usuarios(cpf, usuarios)
+    if consulta == None:
+        nome = input("Informe o nome completo: ")
+        dt_nascimento = input("Informe a data de nascimento (DD/MM/AAAA): ")
+        endereco = input("Informe o endereço completo (Logradouro, nº, bairro, Cidade, Estado): ")
+        usuarios.append({"Nome": nome, "CPF": cpf, "Data de Nascimento": dt_nascimento, "Endereço": endereco})
+        return (print("Usuaŕio cadastrado com sucesso!"))
+    else: 
+        return(print("CPF já cadastrado para: {}".format(consulta)))
+
+def filtrar_usuarios(cpf, usuarios):
+    resultado = ""
+    for usuario in usuarios:
+        if usuario['CPF'] == cpf:
+            resultado = usuario
+
+    if resultado != "":
+        return resultado
+    else:
+        return None
+resultado = ""
 
 def nova_conta():
     #Criar função
@@ -113,6 +136,9 @@ while opcao != 'q':
             system('clear')
             fechar = None
             fechar = ''
+    
+    if opcao == 'nu':
+        novo_usuario()
 
 system('clear')
 print("\nPrograma fechado com sucesso, muito obrigado por utilizar nossos serviços!")
