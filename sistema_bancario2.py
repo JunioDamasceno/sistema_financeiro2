@@ -19,19 +19,51 @@ nsaques = 0
 lim_saques = 3
 opcao = ''
 
-menu = """
-Escolha uma das opções abaixo:
+def menu():
+    menu = """
+    Escolha uma das opções abaixo:
+    
+    [nu] Novo usuário
+    [nc] Nova Conta
+    [ls] Listar Contas
+    [d]  Depositar
+    [s]  Sacar
+    [e]  Extrato
+    [q]  Sair
+    """
+    return(input("Digite a opção: "menu))
 
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
+def novo_usuario():
+    #Criar função
+    return()
 
-"""
+def nova_conta():
+    #Criar função
+    return()
+
+def listar_contas():
+    #Criar função
+    return()
+
+def depositar():
+    #Criar função
+    return()
+
+def sacar():
+    #Criar função
+    return()
+
+def extrato():
+    #Criar função
+    return()
+
+def sair():
+    #Criar função
+    return()
 
 while opcao != 'q':
     print(menu)
-    opcao = input("\nDigite a opção desejada: ")
+    opcao = menu()
 
     if opcao == 'd': 
         valor = float(input("\nDigite o valor de depósito: "))
