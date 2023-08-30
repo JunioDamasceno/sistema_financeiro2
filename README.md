@@ -1,27 +1,28 @@
-# **Sistema Bancário**
+# **Sistema Bancário Otimizado**
 Programa desenvolvido para atividade à ser entregue do curso "Potência Powered by Ifood | Ciênca de dados com Python" da DIO.
 
-Trata-se de um progrma simples que simula três operações de um sistema bancário:
+Trata-se de um progrma simples que simula 7 operações de um sistema bancário:
 
-* Depósito;
-* Saque;
-* Extrato;
+[nu] Novo usuário
+[nc] Nova Conta
+[ls] Listar Contas
+[d]  Depositar
+[s]  Sacar
+[e]  Extrato
+[q]  Sair
 
 Regras:
 
 Não pode haver saques ou depósitos com valor negativo
 Não é possível sacar valor maior que R$ 500,00 por operação
 Não é permitida mais que três operações de saque.
+Para fazer operações de depósito e saque é necessário que primeiro seja criado usuaŕio e conta
+Toda operação irá solicitar número da agência (0001) e número da conta.
+O programa deve controlar o saldo da conta individual dos usuários e exibir extrato individual
+O módulo listar contas deve listar todas as contas cadastradas e o seu respectivo saldo
+A princípio o programa não cria senha individual de usuaŕios para transações (Saques, depósitos e extratos)
 
-O programa pede que o usuário escolha uma das operações: Depósito, saque, extrato ou sair do programa.
-
-Se escolhida a opção depósito, o programa pede que o usuário informe o valor do depósito. Caso o usuário entre com alguma informação inválida o programa deve retornar uma mensagem e retornar para a tela inicial da oparação.
-
-Se escolhida a opção depósito, o programa pede que o usuário informe o valor do saque. Caso o usuário entre com alguma informação inválida o programa deve retornar uma mensagem e retornar para a tela inicial da oparação.
-
-Se escolhida a opção extrato, o programa deve mostrar em sequẽncia todas as operações de depósito e saque que foram realizadas, e exibir no final o saldo da conta.
-
-Se escolhida a opção sair, o programa será fechado.
+Obs.: Algumas regras foram implementadas por mim de modo a criar um programa melhor do que o solicitado no desafio.
 
 
 
